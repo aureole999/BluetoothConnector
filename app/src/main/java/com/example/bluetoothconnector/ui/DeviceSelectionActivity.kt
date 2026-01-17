@@ -70,6 +70,7 @@ class DeviceSelectionActivity : ComponentActivity() {
         }
     }
     
+    @SuppressLint("MissingPermission")
     private fun saveSelection(device: BluetoothDevice) {
         val prefs = getSharedPreferences(QuickConnectTileService.PREFS_NAME, Context.MODE_PRIVATE)
         prefs.edit().apply {
