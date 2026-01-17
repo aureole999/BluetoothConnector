@@ -55,4 +55,15 @@
     <string name="status_connecting">接続中...</string>
     <string name="status_saved">保存済み</string>
     <string name="cd_connected">接続済み</string>
+
+    <!-- Update -->
+    <string name="header_about">このアプリについて</string>
+    <string name="setting_check_update_title">アップデートを確認</string>
+    <string name="setting_current_version">現在のバージョン: %1$s</string>
+    <string name="update_checking">アップデートを確認中...</string>
+    <string name="update_available">新しいバージョンがあります: v%1$s</string>
+    <string name="update_not_available">最新バージョンです</string>
+    <string name="update_error">アップデートの確認に失敗しました</string>
+    <string name="btn_update">更新</string>
+    <string name="btn_download">ダウンロード</string>
 </resources>
