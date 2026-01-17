@@ -8,17 +8,23 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Timer
+import androidx.compose.material.icons.filled.Update
+import androidx.compose.material3.Button
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
@@ -34,6 +40,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.bluetoothconnector.viewmodel.SettingsViewModel
+import com.example.bluetoothconnector.viewmodel.UpdateState
 import androidx.compose.ui.res.stringResource
 import com.example.bluetoothconnector.R
 
@@ -44,6 +51,7 @@ fun SettingsScreen(
     onNavigateBack: () -> Unit
 ) {
     val autoDisconnectEnabled by viewModel.autoDisconnectEnabled.collectAsState(initial = false)
+    val updateState by viewModel.updateState.collectAsState()
     
     Scaffold(
         topBar = {
@@ -115,7 +123,7 @@ fun SettingsScreen(
             
             val tileDeviceName by viewModel.tileConfiguredDeviceName.collectAsState(initial = null)
             
-            androidx.compose.material3.ListItem(
+            ListItem(
                 headlineContent = { Text(stringResource(R.string.setting_reset_tile_title)) },
                 supportingContent = { 
                     val notConfigured = stringResource(R.string.setting_not_configured)
@@ -124,17 +132,72 @@ fun SettingsScreen(
                 },
                 leadingContent = {
                     Icon(
-                        imageVector = androidx.compose.material.icons.Icons.Default.Settings,
+                        imageVector = Icons.Default.Settings,
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 },
                 trailingContent = {
-                    androidx.compose.material3.Button(
+                    Button(
                         onClick = { viewModel.resetTileConfiguration() },
                         enabled = tileDeviceName != null
                     ) {
                         Text(stringResource(R.string.btn_reset))
+                    }
+                }
+            )
+            
+            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+            
+            // About section
+            Text(
+                text = stringResource(R.string.header_about),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+            )
+            
+            // Version info and update check
+            ListItem(
+                headlineContent = { Text(stringResource(R.string.setting_check_update_title)) },
+                supportingContent = { 
+                    val statusText = when (val state = updateState) {
+                        is UpdateState.Idle -> stringResource(R.string.setting_current_version, viewModel.getCurrentVersion())
+                        is UpdateState.Checking -> stringResource(R.string.update_checking)
+                        is UpdateState.Available -> stringResource(R.string.update_available, state.info.versionName)
+                        is UpdateState.UpToDate -> stringResource(R.string.update_not_available)
+                        is UpdateState.Error -> stringResource(R.string.update_error)
+                    }
+                    Text(statusText)
+                },
+                leadingContent = {
+                    if (updateState is UpdateState.Checking) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(24.dp),
+                            strokeWidth = 2.dp
+                        )
+                    } else {
+                        Icon(
+                            imageVector = Icons.Default.Update,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                },
+                trailingContent = {
+                    when (val state = updateState) {
+                        is UpdateState.Available -> {
+                            Button(onClick = { viewModel.downloadUpdate(state.info) }) {
+                                Text(stringResource(R.string.btn_download))
+                            }
+                        }
+                        is UpdateState.Checking -> { /* No button while checking */ }
+                        else -> {
+                            Button(onClick = { viewModel.checkForUpdates() }) {
+                                Text(stringResource(R.string.btn_update))
+                            }
+                        }
                     }
                 }
             )

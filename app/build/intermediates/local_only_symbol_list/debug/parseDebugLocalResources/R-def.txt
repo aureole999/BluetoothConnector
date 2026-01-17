@@ -16,7 +16,9 @@ string action_disconnect_all
 string app_name
 string app_title_devices
 string btn_cancel
+string btn_download
 string btn_reset
+string btn_update
 string cd_back
 string cd_connected
 string cd_refresh
@@ -24,6 +26,7 @@ string cd_settings
 string checkbox_auto_disconnect_3s
 string default_device_name
 string device_unknown
+string header_about
 string header_connection_settings
 string header_paired_devices
 string header_quick_settings_tile
@@ -42,7 +45,9 @@ string notification_title_connected_prefix
 string notification_title_default
 string setting_auto_disconnect_subtitle
 string setting_auto_disconnect_title
+string setting_check_update_title
 string setting_current_config_prefix
+string setting_current_version
 string setting_not_configured
 string setting_reset_tile_title
 string status_connected
@@ -59,5 +64,10 @@ string title_no_devices
 string title_permission_required
 string title_select_device
 string title_settings
+string update_available
+string update_checking
+string update_error
+string update_not_available
 style Theme.BluetoothConnector
 style Theme.BluetoothConnector.Dialog
+xml file_paths

@@ -4,7 +4,7 @@
             "outputFile": "com.example.bluetoothconnector.app-mergeDebugResources-49:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/ykuang/.gradle/caches/8.9/transforms/9e03f26986e9418e452ad5290873968f/transformed/core-1.15.0/res/values-v21/values-v21.xml",
+                    "source": "/Users/ykuang/.gradle/caches/8.9/transforms/beb9a1b7c5a3bef0bd2f1cc35aa3550f/transformed/core-1.15.0/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

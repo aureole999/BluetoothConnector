@@ -16,6 +16,12 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    
+    <!-- Internet permission for update check -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- Install APK permission for auto-update -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <!-- Declare that the app uses Bluetooth -->
     <uses-feature android:name="android.hardware.bluetooth" android:required="true" />
@@ -53,7 +59,7 @@
         <!-- Quick Settings Tile Service -->
         <service
             android:name=".service.QuickConnectTileService"
-            android:label="BT 接続"
+            android:label="@string/tile_label_default"
             android:icon="@drawable/ic_bluetooth_notification"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
@@ -61,6 +67,17 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+        
+        <!-- FileProvider for APK installation -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

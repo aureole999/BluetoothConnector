@@ -55,4 +55,15 @@
     <string name="status_connecting">Connecting...</string>
     <string name="status_saved">Saved</string>
     <string name="cd_connected">Connected</string>
+
+    <!-- Update -->
+    <string name="header_about">About</string>
+    <string name="setting_check_update_title">Check for Updates</string>
+    <string name="setting_current_version">Current version: %1$s</string>
+    <string name="update_checking">Checking for updates...</string>
+    <string name="update_available">Update available: v%1$s</string>
+    <string name="update_not_available">You are using the latest version</string>
+    <string name="update_error">Failed to check for updates</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_download">Download</string>
 </resources>

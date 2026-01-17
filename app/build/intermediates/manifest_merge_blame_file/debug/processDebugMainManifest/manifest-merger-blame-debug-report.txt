@@ -44,176 +44,203 @@
 28-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:18:5-77
 28-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:18:22-74
 29
-30    <!-- Declare that the app uses Bluetooth -->
-31    <uses-feature
-31-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:21:5-87
-32        android:name="android.hardware.bluetooth"
-32-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:21:19-60
-33        android:required="true" />
-33-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:21:61-84
-34
-35    <permission
-35-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/9e03f26986e9418e452ad5290873968f/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
-36        android:name="com.example.bluetoothconnector.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-36-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/9e03f26986e9418e452ad5290873968f/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
-37        android:protectionLevel="signature" />
-37-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/9e03f26986e9418e452ad5290873968f/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
-38
-39    <uses-permission android:name="com.example.bluetoothconnector.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-39-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/9e03f26986e9418e452ad5290873968f/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
-39-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/9e03f26986e9418e452ad5290873968f/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+30    <!-- Internet permission for update check -->
+31    <uses-permission android:name="android.permission.INTERNET" />
+31-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:21:5-67
+31-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:21:22-64
+32
+33    <!-- Install APK permission for auto-update -->
+34    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+34-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:24:5-83
+34-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:24:22-80
+35
+36    <!-- Declare that the app uses Bluetooth -->
+37    <uses-feature
+37-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:27:5-87
+38        android:name="android.hardware.bluetooth"
+38-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:27:19-60
+39        android:required="true" />
+39-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:27:61-84
 40
-41    <application
-41-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:23:5-64:19
-42        android:allowBackup="true"
-42-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:24:9-35
-43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-43-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/9e03f26986e9418e452ad5290873968f/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
-44        android:debuggable="true"
-45        android:extractNativeLibs="false"
-46        android:icon="@mipmap/ic_launcher"
-46-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:25:9-43
-47        android:label="@string/app_name"
-47-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:26:9-41
-48        android:roundIcon="@mipmap/ic_launcher_round"
-48-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:27:9-54
-49        android:supportsRtl="true"
-49-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:28:9-35
-50        android:theme="@style/Theme.BluetoothConnector" >
-50-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:29:9-56
-51        <activity
-51-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:31:9-39:20
-52            android:name="com.example.bluetoothconnector.MainActivity"
-52-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:32:13-41
-53            android:exported="true"
-53-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:33:13-36
-54            android:theme="@style/Theme.BluetoothConnector" >
-54-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:34:13-60
-55            <intent-filter>
-55-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:35:13-38:29
-56                <action android:name="android.intent.action.MAIN" />
-56-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:36:17-69
-56-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:36:25-66
-57
-58                <category android:name="android.intent.category.LAUNCHER" />
-58-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:37:17-77
-58-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:37:27-74
-59            </intent-filter>
-60        </activity>
-61
-62        <!-- Foreground Service for persistent Bluetooth connection -->
-63        <service
-63-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:42:9-45:63
-64            android:name="com.example.bluetoothconnector.service.BluetoothConnectionService"
-64-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:43:13-63
-65            android:exported="false"
-65-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:44:13-37
-66            android:foregroundServiceType="connectedDevice" />
-66-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:45:13-60
+41    <permission
+41-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/beb9a1b7c5a3bef0bd2f1cc35aa3550f/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
+42        android:name="com.example.bluetoothconnector.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+42-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/beb9a1b7c5a3bef0bd2f1cc35aa3550f/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
+43        android:protectionLevel="signature" />
+43-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/beb9a1b7c5a3bef0bd2f1cc35aa3550f/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
+44
+45    <uses-permission android:name="com.example.bluetoothconnector.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+45-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/beb9a1b7c5a3bef0bd2f1cc35aa3550f/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+45-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/beb9a1b7c5a3bef0bd2f1cc35aa3550f/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+46
+47    <application
+47-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:29:5-81:19
+48        android:allowBackup="true"
+48-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:30:9-35
+49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+49-->[androidx.core:core:1.15.0] /Users/ykuang/.gradle/caches/8.9/transforms/beb9a1b7c5a3bef0bd2f1cc35aa3550f/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
+50        android:debuggable="true"
+51        android:extractNativeLibs="false"
+52        android:icon="@mipmap/ic_launcher"
+52-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:31:9-43
+53        android:label="@string/app_name"
+53-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:32:9-41
+54        android:roundIcon="@mipmap/ic_launcher_round"
+54-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:33:9-54
+55        android:supportsRtl="true"
+55-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:34:9-35
+56        android:theme="@style/Theme.BluetoothConnector" >
+56-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:35:9-56
+57        <activity
+57-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:37:9-45:20
+58            android:name="com.example.bluetoothconnector.MainActivity"
+58-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:38:13-41
+59            android:exported="true"
+59-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:39:13-36
+60            android:theme="@style/Theme.BluetoothConnector" >
+60-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:40:13-60
+61            <intent-filter>
+61-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:41:13-44:29
+62                <action android:name="android.intent.action.MAIN" />
+62-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:42:17-69
+62-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:42:25-66
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:43:17-77
+64-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:43:27-74
+65            </intent-filter>
+66        </activity>
 67
-68        <!-- Device Selection Activity for Tile Configuration -->
-69        <activity
-69-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:48:9-51:70
-70            android:name="com.example.bluetoothconnector.ui.DeviceSelectionActivity"
-70-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:49:13-55
-71            android:exported="true"
-71-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:50:13-36
-72            android:theme="@style/Theme.BluetoothConnector.Dialog" />
-72-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:51:13-67
+68        <!-- Foreground Service for persistent Bluetooth connection -->
+69        <service
+69-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:48:9-51:63
+70            android:name="com.example.bluetoothconnector.service.BluetoothConnectionService"
+70-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:49:13-63
+71            android:exported="false"
+71-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:50:13-37
+72            android:foregroundServiceType="connectedDevice" />
+72-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:51:13-60
 73
-74        <!-- Quick Settings Tile Service -->
-75        <service
-75-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:54:9-63:19
-76            android:name="com.example.bluetoothconnector.service.QuickConnectTileService"
-76-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:55:13-60
+74        <!-- Device Selection Activity for Tile Configuration -->
+75        <activity
+75-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:54:9-57:70
+76            android:name="com.example.bluetoothconnector.ui.DeviceSelectionActivity"
+76-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:55:13-55
 77            android:exported="true"
-77-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:59:13-36
-78            android:icon="@drawable/ic_bluetooth_notification"
-78-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:57:13-63
-79            android:label="BT 接続"
-79-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:56:13-34
-80            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" >
-80-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:58:13-77
-81            <intent-filter>
-81-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:60:13-62:29
-82                <action android:name="android.service.quicksettings.action.QS_TILE" />
-82-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:61:17-87
-82-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:61:25-84
-83            </intent-filter>
-84        </service>
-85
-86        <provider
-86-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/8b4b3f04e208f59a54345653545c3594/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-87            android:name="androidx.startup.InitializationProvider"
-87-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/8b4b3f04e208f59a54345653545c3594/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-88            android:authorities="com.example.bluetoothconnector.androidx-startup"
-88-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/8b4b3f04e208f59a54345653545c3594/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-89            android:exported="false" >
-89-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/8b4b3f04e208f59a54345653545c3594/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-90            <meta-data
-90-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/8b4b3f04e208f59a54345653545c3594/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-91                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-91-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/8b4b3f04e208f59a54345653545c3594/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-92                android:value="androidx.startup" />
-92-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/8b4b3f04e208f59a54345653545c3594/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-93            <meta-data
-93-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/ykuang/.gradle/caches/8.9/transforms/a9ef29a7694176e9d4a9fbdf93a66f65/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
-94                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-94-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/ykuang/.gradle/caches/8.9/transforms/a9ef29a7694176e9d4a9fbdf93a66f65/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
-95                android:value="androidx.startup" />
-95-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/ykuang/.gradle/caches/8.9/transforms/a9ef29a7694176e9d4a9fbdf93a66f65/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
-96            <meta-data
-96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-97                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-98                android:value="androidx.startup" />
-98-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-99        </provider>
-100
-101        <activity
-101-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/ykuang/.gradle/caches/8.9/transforms/53055aedc1e7894825bcf899eb984fb9/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
-102            android:name="androidx.compose.ui.tooling.PreviewActivity"
-102-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/ykuang/.gradle/caches/8.9/transforms/53055aedc1e7894825bcf899eb984fb9/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
-103            android:exported="true" />
-103-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/ykuang/.gradle/caches/8.9/transforms/53055aedc1e7894825bcf899eb984fb9/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
-104
-105        <receiver
-105-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-106            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-106-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-107            android:directBootAware="false"
-107-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-108            android:enabled="true"
-108-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-109            android:exported="true"
-109-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-110            android:permission="android.permission.DUMP" >
-110-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-111            <intent-filter>
-111-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-112                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-112-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-112-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-113            </intent-filter>
-114            <intent-filter>
-114-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-115                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-115-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-115-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-116            </intent-filter>
-117            <intent-filter>
-117-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-118                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-118-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-118-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-119            </intent-filter>
-120            <intent-filter>
-120-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-121                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-121-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-121-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/377037f0d5407b50ccaa851d972a6f26/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-122            </intent-filter>
-123        </receiver>
-124    </application>
-125
-126</manifest>
+77-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:56:13-36
+78            android:theme="@style/Theme.BluetoothConnector.Dialog" />
+78-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:57:13-67
+79
+80        <!-- Quick Settings Tile Service -->
+81        <service
+81-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:60:9-69:19
+82            android:name="com.example.bluetoothconnector.service.QuickConnectTileService"
+82-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:61:13-60
+83            android:exported="true"
+83-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:65:13-36
+84            android:icon="@drawable/ic_bluetooth_notification"
+84-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:63:13-63
+85            android:label="@string/tile_label_default"
+85-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:62:13-55
+86            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" >
+86-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:64:13-77
+87            <intent-filter>
+87-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:66:13-68:29
+88                <action android:name="android.service.quicksettings.action.QS_TILE" />
+88-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:67:17-87
+88-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:67:25-84
+89            </intent-filter>
+90        </service>
+91
+92        <!-- FileProvider for APK installation -->
+93        <provider
+94            android:name="androidx.core.content.FileProvider"
+94-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:73:13-62
+95            android:authorities="com.example.bluetoothconnector.fileprovider"
+95-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:74:13-64
+96            android:exported="false"
+96-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:75:13-37
+97            android:grantUriPermissions="true" >
+97-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:76:13-47
+98            <meta-data
+98-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:77:13-79:54
+99                android:name="android.support.FILE_PROVIDER_PATHS"
+99-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:78:17-67
+100                android:resource="@xml/file_paths" />
+100-->/Users/ykuang/IdeaProjects/BluetoothConnector/app/src/main/AndroidManifest.xml:79:17-51
+101        </provider>
+102        <provider
+102-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/27433faa27dcfe6d6853bb7fcb2a8b95/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+103            android:name="androidx.startup.InitializationProvider"
+103-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/27433faa27dcfe6d6853bb7fcb2a8b95/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+104            android:authorities="com.example.bluetoothconnector.androidx-startup"
+104-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/27433faa27dcfe6d6853bb7fcb2a8b95/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+105            android:exported="false" >
+105-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/27433faa27dcfe6d6853bb7fcb2a8b95/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+106            <meta-data
+106-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/27433faa27dcfe6d6853bb7fcb2a8b95/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+107                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+107-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/27433faa27dcfe6d6853bb7fcb2a8b95/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+108                android:value="androidx.startup" />
+108-->[androidx.emoji2:emoji2:1.3.0] /Users/ykuang/.gradle/caches/8.9/transforms/27433faa27dcfe6d6853bb7fcb2a8b95/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+109            <meta-data
+109-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/ykuang/.gradle/caches/8.9/transforms/711335ec448f67c7d7fbe3900ce830ca/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
+110                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+110-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/ykuang/.gradle/caches/8.9/transforms/711335ec448f67c7d7fbe3900ce830ca/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
+111                android:value="androidx.startup" />
+111-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/ykuang/.gradle/caches/8.9/transforms/711335ec448f67c7d7fbe3900ce830ca/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
+112            <meta-data
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+113                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+114                android:value="androidx.startup" />
+114-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+115        </provider>
+116
+117        <activity
+117-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/ykuang/.gradle/caches/8.9/transforms/00998f4f7801eff4a380d1c0af0300c0/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+118            android:name="androidx.compose.ui.tooling.PreviewActivity"
+118-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/ykuang/.gradle/caches/8.9/transforms/00998f4f7801eff4a380d1c0af0300c0/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+119            android:exported="true" />
+119-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/ykuang/.gradle/caches/8.9/transforms/00998f4f7801eff4a380d1c0af0300c0/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+120
+121        <receiver
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+122            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+123            android:directBootAware="false"
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+124            android:enabled="true"
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+125            android:exported="true"
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+126            android:permission="android.permission.DUMP" >
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+127            <intent-filter>
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+128                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+129            </intent-filter>
+130            <intent-filter>
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+131                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+132            </intent-filter>
+133            <intent-filter>
+133-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+134                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+135            </intent-filter>
+136            <intent-filter>
+136-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+137                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+137-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+137-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/ykuang/.gradle/caches/8.9/transforms/02d6bf193094d1c402ca396c1e8de0bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+138            </intent-filter>
+139        </receiver>
+140    </application>
+141
+142</manifest>
