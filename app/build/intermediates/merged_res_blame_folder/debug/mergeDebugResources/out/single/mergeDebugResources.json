@@ -1,0 +1,166 @@
+[
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-hdpi_ic_launcher_background.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxxhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxxhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/drawable_ic_bluetooth_notification.xml.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/drawable/ic_bluetooth_notification.xml"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-mdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-mdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-hdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-hdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-debug-51:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/ykuang/.gradle/daemon/8.9/com.example.bluetoothconnector.app-main-53:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.bluetoothconnector.app-debug-51:/mipmap-xxhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.example.bluetoothconnector.app-main-53:/mipmap-xxhdpi/ic_launcher_monochrome.png"
+    }
+]

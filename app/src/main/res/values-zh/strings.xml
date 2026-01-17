@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">蓝牙连接器</string>
+    <string name="app_title_devices">蓝牙设备</string>
+    <string name="cd_settings">设置</string>
+    <string name="cd_refresh">刷新</string>
+    <string name="header_paired_devices">已配对设备</string>
+    <string name="title_permission_required">需要蓝牙权限</string>
+    <string name="msg_permission_required">请授予蓝牙权限以扫描设备。</string>
+    <string name="title_bluetooth_not_available">蓝牙不可用</string>
+    <string name="msg_bluetooth_not_available">此设备不支持蓝牙。</string>
+    <string name="title_bluetooth_disabled">蓝牙已禁用</string>
+    <string name="msg_bluetooth_disabled">请在设置中开启蓝牙。</string>
+    <string name="title_no_devices">未找到设备</string>
+    <string name="msg_no_devices">未找到已配对的设备。\n请在设置中配对新设备。</string>
+    <string name="title_settings">设置</string>
+    <string name="cd_back">返回</string>
+    <string name="header_connection_settings">连接设置</string>
+    <string name="setting_auto_disconnect_title">自动断开连接</string>
+    <string name="setting_auto_disconnect_subtitle">连接成功3秒后自动断开。</string>
+    <string name="hint_automation">提示：如果在自动化工具中设置“当连接到蓝牙设备时”的自动化，可以使用此应用的连接作为触发器。</string>
+    <string name="header_quick_settings_tile">快速设置磁贴</string>
+    <string name="setting_reset_tile_title">重置配置</string>
+    <string name="setting_current_config_prefix">当前设置: %1$s</string>
+    <string name="setting_not_configured">未配置</string>
+    <string name="btn_reset">重置</string>
+
+    <!-- BluetoothConnectionService -->
+    <string name="default_device_name">蓝牙设备</string>
+    <string name="notification_connecting">连接中: %1$s...</string>
+    <string name="notification_connection_failed">连接失败: %1$s</string>
+    <string name="notification_channel_name">蓝牙连接</string>
+    <string name="notification_channel_desc">显示蓝牙连接状态</string>
+    <string name="notification_title_connected_prefix">已连接: %1$s</string>
+    <string name="notification_title_default">蓝牙连接</string>
+    <string name="action_disconnect_all">全部断开</string>
+
+    <!-- QuickConnectTileService -->
+    <string name="tile_label_unconfigured">蓝牙连接 (未设置)</string>
+    <string name="tile_subtitle_unconfigured">点击设置</string>
+    <string name="tile_label_connected">已连接</string>
+    <string name="tile_label_default">蓝牙连接</string>
+
+    <!-- DeviceSelectionActivity -->
+    <string name="device_unknown">未知设备</string>
+    <string name="title_select_device">选择快速连接设备</string>
+    <string name="msg_select_device">选择点击磁贴时连接的设备。</string>
+    <string name="msg_no_paired_devices">未找到已配对设备</string>
+    <string name="checkbox_auto_disconnect_3s">连接成功3秒后自动断开</string>
+    <string name="btn_cancel">取消</string>
+
+    <!-- BluetoothDeviceItem -->
+    <string name="status_connected_auto_disconnect">已连接・%1$d秒后断开</string>
+    <string name="status_connected">已连接</string>
+    <string name="status_connecting">连接中...</string>
+    <string name="status_saved">已保存</string>
+    <string name="cd_connected">已连接</string>
+</resources>
