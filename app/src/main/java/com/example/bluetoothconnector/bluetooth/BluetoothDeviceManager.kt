@@ -76,7 +76,7 @@ class BluetoothDeviceManager(context: Context) {
                 fallbackSocket.connect()
                 Result.success(Unit)
             } catch (fallbackException: Exception) {
-                Result.failure(IOException("接続に失敗しました: ${e.message}"))
+                Result.failure(IOException("Connection failed: ${e.message}"))
             }
         } catch (e: Exception) {
             Result.failure(e)

@@ -16,6 +16,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.bluetoothconnector.bluetooth.BluetoothDeviceManager
 import com.example.bluetoothconnector.data.SettingsRepository
+import com.example.bluetoothconnector.R
 import com.example.bluetoothconnector.service.BluetoothConnectionService
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -62,6 +63,7 @@ class BluetoothViewModel(application: Application) : AndroidViewModel(applicatio
     
     private var bluetoothService: BluetoothConnectionService? = null
     private var serviceBound = false
+    private val countdownJobs = mutableMapOf<String, kotlinx.coroutines.Job>()
     
     private val serviceConnection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
@@ -150,9 +152,10 @@ class BluetoothViewModel(application: Application) : AndroidViewModel(applicatio
     fun loadPairedDevices() {
         _uiState.value = _uiState.value.copy(isLoading = true)
         
+        val context = getApplication<Application>()
         val devices = bluetoothManager.getPairedDevices().map { device ->
             BluetoothDeviceInfo(
-                name = device.name ?: "不明なデバイス",
+                name = device.name ?: context.getString(R.string.device_unknown),
                 address = device.address,
                 majorDeviceClass = device.bluetoothClass?.majorDeviceClass ?: 0,
                 bondState = device.bondState,
@@ -205,7 +208,10 @@ class BluetoothViewModel(application: Application) : AndroidViewModel(applicatio
      * Start auto-disconnect countdown (3 seconds) for a specific device
      */
     private fun startAutoDisconnectCountdown(address: String) {
-        viewModelScope.launch {
+        // Cancel any existing countdown for this address
+        countdownJobs[address]?.cancel()
+        
+        val job = viewModelScope.launch {
             for (countdown in 3 downTo 1) {
                 val currentCountdowns = _uiState.value.autoDisconnectCountdown.toMutableMap()
                 currentCountdowns[address] = countdown
@@ -219,24 +225,30 @@ class BluetoothViewModel(application: Application) : AndroidViewModel(applicatio
             val cleanupCountdowns = _uiState.value.autoDisconnectCountdown.toMutableMap()
             cleanupCountdowns.remove(address)
             _uiState.value = _uiState.value.copy(autoDisconnectCountdown = cleanupCountdowns)
+            countdownJobs.remove(address)
         }
+        countdownJobs[address] = job
     }
     
     /**
      * Disconnect from a specific connected device
      */
     fun disconnect(address: String) {
+        // Cancel auto-disconnect countdown if running
+        countdownJobs[address]?.cancel()
+        countdownJobs.remove(address)
+        
+        // Clear countdown from UI
+        val cleanupCountdowns = _uiState.value.autoDisconnectCountdown.toMutableMap()
+        cleanupCountdowns.remove(address)
+        _uiState.value = _uiState.value.copy(autoDisconnectCountdown = cleanupCountdowns)
+        
         val context = getApplication<Application>()
         val intent = Intent(context, BluetoothConnectionService::class.java).apply {
             action = BluetoothConnectionService.ACTION_DISCONNECT
             putExtra(BluetoothConnectionService.EXTRA_DEVICE_ADDRESS, address)
         }
         context.startService(intent)
-        
-        // Optimistically remove from connected (service callback will confirm)
-        // actually, let's wait for callback to keep state true to reality, 
-        // but maybe we can mark it as not connected in UI if needed. 
-        // For now, let state callback handle it.
     }
     
     /**

@@ -81,8 +81,8 @@ class QuickConnectTileService : TileService() {
                 
                 val intent = Intent(this, BluetoothConnectionService::class.java).apply {
                     action = BluetoothConnectionService.ACTION_CONNECT
-                    val adapter = android.bluetooth.BluetoothAdapter.getDefaultAdapter()
-                    val device = adapter.getRemoteDevice(deviceAddress)
+                    val btManager = getSystemService(Context.BLUETOOTH_SERVICE) as android.bluetooth.BluetoothManager
+                    val device = btManager.adapter?.getRemoteDevice(deviceAddress)
                     putExtra(BluetoothConnectionService.EXTRA_DEVICE, device)
                     putExtra(BluetoothConnectionService.EXTRA_DEVICE_NAME, deviceName)
                     putExtra(BluetoothConnectionService.EXTRA_AUTO_DISCONNECT, autoDisconnect)
