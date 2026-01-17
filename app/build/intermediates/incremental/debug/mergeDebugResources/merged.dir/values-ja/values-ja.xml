@@ -4,7 +4,9 @@
     <string name="app_name">Bluetooth Connector</string>
     <string name="app_title_devices">Bluetooth デバイス</string>
     <string name="btn_cancel">キャンセル</string>
+    <string name="btn_download">ダウンロード</string>
     <string name="btn_reset">リセット</string>
+    <string name="btn_update">更新</string>
     <string msgid="881409763997275156" name="call_notification_answer_action">"応答"</string>
     <string msgid="8793775615905189152" name="call_notification_answer_video_action">"ビデオ"</string>
     <string msgid="3229508546291798546" name="call_notification_decline_action">"拒否"</string>
@@ -24,6 +26,7 @@
     <string msgid="6312721426453364202" name="default_popup_window_title">"ポップアップウィンドウ"</string>
     <string name="device_unknown">不明なデバイス</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"プルダウン メニュー"</string>
+    <string name="header_about">このアプリについて</string>
     <string name="header_connection_settings">接続設定</string>
     <string name="header_paired_devices">ペアリング済みのデバイス</string>
     <string name="header_quick_settings_tile">クイック設定タイル</string>
@@ -106,7 +109,9 @@
     <string msgid="6043586758067023" name="selected">"選択済み"</string>
     <string name="setting_auto_disconnect_subtitle">接続成功から3秒後に自動的に切断します。</string>
     <string name="setting_auto_disconnect_title">接続後に自動切断</string>
+    <string name="setting_check_update_title">アップデートを確認</string>
     <string name="setting_current_config_prefix">現在の設定: %1$s</string>
+    <string name="setting_current_version">現在のバージョン: %1$s</string>
     <string name="setting_not_configured">未設定</string>
     <string name="setting_reset_tile_title">設定をリセット</string>
     <string msgid="4139871816613051306" name="state_empty">"なし"</string>
@@ -132,4 +137,8 @@
     <string name="title_settings">設定</string>
     <string msgid="3765533235322692011" name="tooltip_description">"ツールチップ"</string>
     <string msgid="3124740595719787496" name="tooltip_label">"ツールチップを表示"</string>
+    <string name="update_available">新しいバージョンがあります: v%1$s</string>
+    <string name="update_checking">アップデートを確認中...</string>
+    <string name="update_error">アップデートの確認に失敗しました</string>
+    <string name="update_not_available">最新バージョンです</string>
 </resources>
