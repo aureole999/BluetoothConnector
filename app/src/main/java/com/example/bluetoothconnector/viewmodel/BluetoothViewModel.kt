@@ -18,6 +18,7 @@ import com.example.bluetoothconnector.bluetooth.BluetoothDeviceManager
 import com.example.bluetoothconnector.data.SettingsRepository
 import com.example.bluetoothconnector.R
 import com.example.bluetoothconnector.service.BluetoothConnectionService
+import com.example.bluetoothconnector.service.QuickConnectTileService
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -126,9 +127,41 @@ class BluetoothViewModel(application: Application) : AndroidViewModel(applicatio
     }
     
     init {
-        // Bind to service
-        val intent = Intent(application, BluetoothConnectionService::class.java)
-        application.bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
+        // Observe connection state from SharedPreferences (same source as Tile)
+        observeConnectionState()
+    }
+    
+    private fun observeConnectionState() {
+        val prefs = getApplication<Application>().getSharedPreferences(
+            QuickConnectTileService.PREFS_NAME, 
+            Context.MODE_PRIVATE
+        )
+        prefs.registerOnSharedPreferenceChangeListener { sharedPreferences, key ->
+            if (key == QuickConnectTileService.KEY_CONNECTED_DEVICES) {
+                val connectedSet = sharedPreferences.getStringSet(
+                    QuickConnectTileService.KEY_CONNECTED_DEVICES, 
+                    emptySet()
+                ) ?: emptySet()
+                _uiState.value = _uiState.value.copy(
+                    connectedDeviceAddresses = connectedSet
+                )
+            }
+        }
+        // Initial sync
+        val connectedSet = prefs.getStringSet(
+            QuickConnectTileService.KEY_CONNECTED_DEVICES, 
+            emptySet()
+        ) ?: emptySet()
+        _uiState.value = _uiState.value.copy(
+            connectedDeviceAddresses = connectedSet
+        )
+    }
+    
+    private fun bindServiceIfNeeded() {
+        if (!serviceBound) {
+            val intent = Intent(getApplication(), BluetoothConnectionService::class.java)
+            getApplication<Application>().bindService(intent, serviceConnection, 0) // No BIND_AUTO_CREATE
+        }
     }
     
     /**
