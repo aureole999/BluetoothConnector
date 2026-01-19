@@ -136,22 +136,29 @@ class UpdateManager(private val context: Context) {
     }
     
     private fun installApk(fileName: String) {
-        val file = File(context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), fileName)
-        
-        if (!file.exists()) return
-        
-        val uri = FileProvider.getUriForFile(
-            context,
-            "${context.packageName}.fileprovider",
-            file
-        )
-        
-        val intent = Intent(Intent.ACTION_VIEW).apply {
-            setDataAndType(uri, APK_MIME_TYPE)
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION
+        try {
+            val file = File(context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), fileName)
+            
+            if (!file.exists()) {
+                android.util.Log.e("UpdateManager", "APK file not found: ${file.absolutePath}")
+                return
+            }
+            
+            val uri = FileProvider.getUriForFile(
+                context,
+                "${context.packageName}.fileprovider",
+                file
+            )
+            
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                setDataAndType(uri, APK_MIME_TYPE)
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION
+            }
+            
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            android.util.Log.e("UpdateManager", "Failed to install APK", e)
         }
-        
-        context.startActivity(intent)
     }
     
     private fun getCurrentVersion(): String {
